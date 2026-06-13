@@ -15,8 +15,8 @@ Gateway: the gateway to the internet (router gateway ie 192.193.343.1), all Ipv4
 ~~~
 #include <WiFi.h>
 
-const char *ssid_STA    = "pwsong"; //Enter the home wifi router name
-const char *password_STA = "05201120"; //Enter the home wifi router password
+const char *ssid_STA    = "*****"; //Enter the home wifi router name
+const char *password_STA = "******"; //Enter the home wifi router password
 
 IPAddress local_IP(10,0,0,123);//Set the IP address of ESP32 itself (must be within my router range 1-254, IPv4)
 // Canada home "10.0.0.__"
