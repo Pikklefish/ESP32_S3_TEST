@@ -9,12 +9,16 @@
 In this example we use IPv4 (old version)
 
 ***IPv4***
-IPv4 format: xxx.xxx.xxx.xxx (numbers range from 1-255)
-Subnet: sets the guideline for what is considered locl network.
-For example: If local network is 192.193.343.xxx and subnet is 255.255.255.0 it means the first 3 numbers should be same and the last number can be unique to be considered local network (if it is different it will direct it to the internet) 
-Gateway: the gateway to the internet (router gateway ie 192.193.343.1), all Ipv4 address not 192.193.343.xxx is routed to this gateway to be connected to the internet.
 
+IPv4 format: xxx.xxx.xxx.xxx (numbers range from 0~255)
 
+***Subnetwork*** (subnet): logical subdivision of an IP network that defines which devices can communicate directly without needing a router.
+
+For example: If the local network uses 192.168.34.xxx and the subnet mask is 255.255.255.0, it means the first 3 numbers must be exactly the same for devices to be on the same local network. The last number must be unique to each device. If a device tries to reach an address where the first three numbers are different, the traffic is directed out to a router (and usually the internet).
+
+***Default Gateway***: The router IP address (e.g., 192.168.1.1) that acts as an exit point for a local network. Any traffic destined for an IPv4 address outside the local 192.168.1.xxx subnet is sent to this gateway, which routes it to its next destination, such as another internal corporate network or the internet.
+
+Below is a sample code to run Station mode on ESP32 S3 Wroom
 ~~~
 #include <WiFi.h>
 
@@ -59,4 +63,12 @@ void setup() {
 
 void loop() {
 }
+~~~
+
+Should expect output on serial monitor
+~~~
+Connected to router!
+ESP32 IP address = 10.0.0.123
+MAC address = 1C:DB:D4:56:FA:AC
+Setup End
 ~~~
