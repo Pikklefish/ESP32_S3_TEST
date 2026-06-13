@@ -1,11 +1,13 @@
 # ESP32_S3_TEST
 
-## Wifi ESP 32 as Station 
+## WIFI on ESP32 (Station vs AP)
+### Station Mode
 ![station wifi mode](/esp_wifi_station.png)
 
-Station means ESP32 board is connected to the home router
-IPv4 (old version) now we use IPv6
+***Station*** means ESP32 board is connected to an Access Point (e.g. home router)
+In this example we use IPv4 (old version)
 
+***IPv4***
 IPv4 format: xxx.xxx.xxx.xxx (numbers range from 1-255)
 Subnet: sets the guideline for what is considered locl network.
 For example: If local network is 192.193.343.xxx and subnet is 255.255.255.0 it means the first 3 numbers should be same and the last number can be unique to be considered local network (if it is different it will direct it to the internet) 
@@ -19,8 +21,6 @@ const char *ssid_STA    = "*****"; //Enter the home wifi router name
 const char *password_STA = "******"; //Enter the home wifi router password
 
 IPAddress local_IP(10,0,0,123);//Set the IP address of ESP32 itself (must be within my router range 1-254, IPv4)
-// Canada home "10.0.0.__"
-
 IPAddress gateway(10,0,0,1);   //Set the gateway 
 IPAddress subnet(255,255,255,0);  //Set the subnet mask (255 means locked, 0 means unique)
 
