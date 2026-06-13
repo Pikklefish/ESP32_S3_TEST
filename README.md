@@ -1,4 +1,10 @@
 # ESP32_S3_TEST
+IDE: VScode + Platform IO 
+Framework: Arduino (easier for beginners)
+
+For ESP32, ESP-IDF framework is recommended for more advanced low-level framework.
+
+Langauge: C++
 
 ## WIFI on ESP32 (Station vs AP)
 ### Station Mode
