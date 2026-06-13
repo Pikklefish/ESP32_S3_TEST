@@ -5,6 +5,7 @@
 ![station wifi mode](/esp_wifi_station.png)
 
 ***Station*** means ESP32 board is connected to an Access Point (e.g. home router)
+
 In this example we use IPv4 (old version)
 
 ***IPv4***
