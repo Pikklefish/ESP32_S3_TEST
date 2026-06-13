@@ -1,2 +1,5 @@
 # ESP32_S3_TEST
-trial runs
+
+## Wifi ESP 32 as Station 
+Station means ESP32 board is connected to the home router
+
